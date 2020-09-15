@@ -40,10 +40,14 @@ function setup() {
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
+    box1Body = Bodies.rectangle(400,650,200,20 , {isStatic:true} );
+ 	World.add(world, box1Body);
 
 
 	Engine.run(engine);
-  
+	box1Sprite.shapeColor='red'
+	box2Sprite.shapeColor='red'
+	box3Sprite.shapeColor='red'
 }                 
 
 
@@ -52,6 +56,8 @@ function draw() {
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
+  box1Sprite.x= box1Body.position.x 
+  box1Sprite.y= box1Body.position.y 
   drawSprites();
  
 }
